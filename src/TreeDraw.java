@@ -10,6 +10,9 @@ package src;
 import java.io.*;
 import java.util.*;
 
+import javax.swing.JFileChooser;
+import javax.swing.filechooser.FileNameExtensionFilter;
+
 /**
  * A simple program to create and draw Binary Search Tree of numbers. Please
  * place StdDraw.java in the same directory as this file. Uses: Provide a text
@@ -24,7 +27,7 @@ public class TreeDraw {
         String word;
 
         try {
-            diskInput = new BufferedReader(new InputStreamReader(new FileInputStream(new File("tree.txt"))));
+            diskInput = new BufferedReader(new InputStreamReader(new FileInputStream(openFile())));
             Scanner input = new Scanner(diskInput);
             while (input.hasNext()) {
                 word = input.next();
@@ -43,6 +46,19 @@ public class TreeDraw {
         Display dt = new Display(t);
         dt.drawTree(t.root);
 
+    }
+
+    public static File openFile() {
+        JFileChooser open = new JFileChooser();
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("Text file containing numbers", "txt");
+        open.setFileFilter(filter);
+        int status = open.showOpenDialog(null);
+        if (status == JFileChooser.APPROVE_OPTION) {
+            return open.getSelectedFile();
+        }
+        else {
+            return new File("tree.txt");
+        }
     }
 
 }
