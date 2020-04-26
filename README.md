@@ -1,3 +1,5 @@
+## [![license](https://img.shields.io/github/license/DAVFoundation/captain-n3m0.svg?style=flat-square)](https://github.com/avinal/Binary-Search-Tree/LICENSE)
+
 # Binary-Search-Tree
 A simple Java Program to reate and Draw Binary Search Tree of Integers
 
