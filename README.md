@@ -1,13 +1,13 @@
 ## [![license](https://img.shields.io/github/license/DAVFoundation/captain-n3m0.svg?style=flat-square)](https://github.com/avinal/Binary-Search-Tree/blob/master/LICENSE)
 
 # Binary-Search-Tree
-A simple Java Program to reate and Draw Binary Search Tree of Integers
+A simple Java Program to create and Draw Binary Search Tree of Integers
 
 # How to Compile
 ```
 git clone https://github.com/avinal/Binary-Search-Tree.git
 cd Binary-Search-Tree
-javac src/*.java
+java src/*.java
 java src.TreeDraw
 ```
 
